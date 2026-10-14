@@ -1,0 +1,4 @@
+load-module module-native-protocol-unix auth-anonymous=1 auth-cookie=0 auth-group-enable=0 socket=/run/pulse/native
+load-module module-null-sink sink_name=spotify sink_properties=device.description=Spotify
+set-default-sink spotify
+
