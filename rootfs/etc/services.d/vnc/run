@@ -1,7 +1,0 @@
-#!/usr/bin/with-contenv bashio
-set -e
-export DISPLAY=:0
-while [ ! -S /tmp/.X11-unix/X0 ]; do sleep 1; done
-x11vnc -display :0 -forever -shared -rfbport 5900 -nopw -listen 127.0.0.1 -o /dev/stdout &
-exec websockify --verbose --web=/usr/share/novnc/ 6080 127.0.0.1:5900
-
